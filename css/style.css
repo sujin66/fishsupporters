@@ -88,7 +88,7 @@ header{
     height: 70px;
     font-size: 30px;
     border-radius: 50%;
-    background-color: black;
+    background-color: #232323;
     text-align: center;
     position: fixed;
     bottom: 10%;
@@ -111,6 +111,7 @@ header{
 .myBtnContainer1{
     width: 60%;
     height: 80%;
+    animation: slideleft 2.5s ease-in-out;
 
 }
 
@@ -119,6 +120,7 @@ header{
     height: 80%;
     padding-top: 60px;
     box-sizing: border-box;
+    animation: slideright 2.5s ease-in-out;
 
 }
 
@@ -129,6 +131,7 @@ header{
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
+
 } 
 .menubox{
     width: 150px;
@@ -136,8 +139,15 @@ header{
     border-radius: 10px;
 }
 
+.menubox:hover{
+    box-shadow: #eee 1px 1px 1px;
+}
+.menubox1:hover{
+    box-shadow: #eee 1px 1px 1px;
 
-.menubox1 {
+}
+
+.menubox1{
     width: 100%;
     box-sizing: border-box;
     border: 2px solid rgba(177, 174, 174, 0.5);
@@ -186,7 +196,7 @@ header{
 
 .sec2{
     width: 99%;
-    padding-top: 3%;
+    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -270,3 +280,14 @@ header{
     100%{opacity: 1; transform: translatY(0);}
 
 }
+@keyframes slideleft{
+    0%{opacity: 0; transform: translateX(-50%); transform: scale(101%);}
+    100%{opacity: 1; transform: translateX(0); transform: scale(100%);}
+
+}
+@keyframes slideright{
+    0%{opacity: 0; transform: translateX(50%); transform: scale(101%);}
+    100%{opacity: 1; transform: translateX(0); transform: scale(100%);}
+
+}
+
